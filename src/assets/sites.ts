@@ -9,10 +9,6 @@ const sites: SiteProps[] = [
     label: "UpStart Dashboard",
     url: "https://updash.gcesconcordia.com"
   },
-  {
-    label: "Technology Blog",
-    url: "https://dev.gcesconcordia.com"
-  }
 ]
 
 export default sites;
