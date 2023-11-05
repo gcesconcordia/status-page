@@ -7,9 +7,10 @@ import { useEffect, useState } from "react";
 export interface SiteProps {
   label: string;
   url: string;
+  dataTip?: string;
 }
 
-const Site = ({ label, url }: SiteProps) => {
+const Site = ({ label, url, dataTip }: SiteProps) => {
   const [isHealthy, setIsHealthy] = useState(false);
 
   useEffect(() => {
@@ -33,14 +34,18 @@ const Site = ({ label, url }: SiteProps) => {
   }, []);
 
   return (
-    <li className="flex flex-wrap items-center space-x-2">
+    <li className="m-2 flex flex-wrap items-center space-x-2">
       <div
-        className={"h-2 w-2 rounded-full p-1".concat(
+        className={"h-4 w-4 rounded-full p-1".concat(
           " ",
           isHealthy ? "bg-green-500" : "bg-red-500",
         )}
       ></div>
-      <a className="" href={url}>
+      <a
+        data-tip={dataTip}
+        className="tooltip underline-offset-2 hover:underline"
+        href={url}
+      >
         {label}
       </a>
       &nbsp;{"-"}&nbsp;{isHealthy ? "Available" : "Degraded"}
