@@ -16,10 +16,13 @@ export default function Home() {
         />
         <link rel="icon" href="/logo.webp" />
       </Head>
-      <main className="relative flex min-h-screen flex-col items-center font-sans">
+      <main className="relative flex flex-col items-center font-sans">
+
+
         <TitleBar></TitleBar>
-        <div className=""></div>
-        <ul className="mt-32">
+        <div className="h-12"></div>
+        <Support></Support>
+        <ul className="mt-32 sm:min-h-[57.4vh]">
           {sites.map((site: SiteProps, idx: number) => (
             <Site
               key={idx}
@@ -30,7 +33,6 @@ export default function Home() {
           ))}
         </ul>
         <div className="my-8 flex"></div>
-        <Support></Support>
         <Footer></Footer>
       </main>
     </>

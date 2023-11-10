@@ -3,7 +3,7 @@ import Image from "next/image";
 const Footer = () => {
   const time = new Date().getFullYear();
   return (
-    <footer className="footer absolute bottom-0 bg-neutral-900 p-10 text-white">
+    <footer className="footer sm:absolute sm:bottom-0 bg-neutral-900 p-10 text-white">
       <div>
         <div className="relative flex h-20 w-20 items-center justify-center rounded-full">
           <Image src="/logo.webp" fill={true} className="" alt="logo"></Image>
