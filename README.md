@@ -1,28 +1,35 @@
-# Create T3 App
+# GCES Systems Status Page
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+Keep track of our internal services to make sure it is smooth and spiffy ✨
 
-## What's next? How do I make an app with this?
+Currently keeping track of:
+- Homepage at https://gcesconcordia.com
+- UpDash at https://updash.gcesconcordia.com
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+## How does it work?
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+By sending a HTTP GET request to the sites' `/healthcheck` endpoint. When the API endpoint responds with a `OK` 200 status, we know it is ballin'. Otherwise, raise the alarm bells 🔔.
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+Note that this is not configured to be a polling feature since that could potentially overload the server and degrade performance for users.
 
-## Learn More
+## Deployment
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+The proof-of-concept (PoC) is currently being hosted on Vercel, which is not ideal 🙅. It needs to be lifted and shifted to a dedicated server (Server 1) and potentially replicated on another (Server 2) to ensure the status page is operational on the event of Vercel infrastructure or Server 1 or Server 2 fails.
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+### Manually
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+To manually deploy on a Linux baremetal server (with `ssh` and `root` access):
 
-## How do I deploy this?
+- Log in with `ssh` to the server
+- Make sure the following dependencies are installed
+  - git
+  - nodejs >= 19.0.0
+  - npm
+  - python >= 3.7
+  - build-essential (for `apt`-based Linux distributions)
+  - ufw
+  - nginx
+- Clone the repo: `git clone https://github.com/gcesconcordia/status-page`
+- Install
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+WIP...
