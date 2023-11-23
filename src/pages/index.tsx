@@ -22,7 +22,7 @@ export default function Home() {
         <TitleBar></TitleBar>
         <div className="h-12"></div>
         <Support></Support>
-        <ul className="mt-32 sm:min-h-[57.4vh]">
+        <ul className="mt-32 min-h-screen">
           {sites.map((site: SiteProps, idx: number) => (
             <Site
               key={idx}
