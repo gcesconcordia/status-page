@@ -14,31 +14,31 @@ const Footer = () => {
       </div>
       <div>
         <span className="footer-title">Organization</span>
-        <a href="/learn-more" className="link link-hover">
+        <a href="https://gcesconcordia.com/learn-more" className="link link-hover">
           About Us
         </a>
-        <a href="/contact" className="link link-hover">
+        <a href="https://gcesconcordia.com/contact" className="link link-hover">
           Contact
         </a>
-        <a href="/work-with-us" className="link link-hover">
+        <a href="https://gcesconcordia.com/work-with-us" className="link link-hover">
           Sponsorship
         </a>
-        <a href="/resource-hub" className="link link-hover">
+        <a href="https://gcesconcordia.com/resource-hub" className="link link-hover">
           Resource Hub
         </a>
-        <a href="/meet-the-team" className="link link-hover">
+        <a href="https://gcesconcordia.com/meet-the-team" className="link link-hover">
           Meet the Team
         </a>
-        <a href="/apply" className="link link-hover">
+        <a href="https://gcesconcordia.com/apply" className="link link-hover">
           Apply to join
         </a>
       </div>
       <div>
         <span className="footer-title">Events</span>
-        <a href="/upstart" className="link link-hover">
+        <a href="https://gcesconcordia.com/upstart" className="link link-hover">
           UpStart 2024
         </a>
-        <a href="/upstart/2023" className="link link-hover">
+        <a href="https://gcesconcordia.com/upstart/2023" className="link link-hover">
           UpStart 2023
         </a>
         <a
